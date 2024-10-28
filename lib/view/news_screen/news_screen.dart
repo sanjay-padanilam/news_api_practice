@@ -20,6 +20,13 @@ class _NewsScreenState extends State<NewsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.grey,
+        title: Text(
+          "Articles.....",
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+        ),
+      ),
       backgroundColor: Colors.white,
       body: Center(
           child: Consumer<NewsScreenControler>(
@@ -31,9 +38,12 @@ class _NewsScreenState extends State<NewsScreen> {
                         child: Column(
                           children: [
                             Text(
-                              proobj.articlelist[index].title.toString(),
+                              "${proobj.articlelist[index].title.toString()}.",
                               style: TextStyle(
                                   fontSize: 25, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 20,
                             ),
                             Container(
                               height: 200,
