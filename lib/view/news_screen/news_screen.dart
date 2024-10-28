@@ -13,7 +13,10 @@ class NewsScreen extends StatefulWidget {
 class _NewsScreenState extends State<NewsScreen> {
   @override
   void initState() {
-    context.read<NewsScreenControler>().getarticle();
+    WidgetsBinding.instance.addPostFrameCallback(
+      (timeStamp) => context.read<NewsScreenControler>().getarticle(),
+    );
+
     super.initState();
   }
 
