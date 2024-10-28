@@ -36,8 +36,8 @@ class _NewsScreenState extends State<NewsScreen> {
                                   fontSize: 25, fontWeight: FontWeight.bold),
                             ),
                             Container(
-                              height: 100,
-                              width: 100,
+                              height: 200,
+                              width: 300,
                               child: Image(
                                   fit: BoxFit.cover,
                                   image: NetworkImage(proobj
